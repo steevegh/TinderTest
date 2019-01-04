@@ -15,10 +15,11 @@ public class SignUpToTinder {
 	
 	
   @Test
-  public void signUpToTinderAction() {
+  public void signUpToTinderAction() throws InterruptedException {
 	  LoginPage login = new LoginPage(driver);
 	  login.openPage();
 	  login.LoginButtonActionFB();
+	  login.LoginWithFacebookAccountGetStarted();
 	  
 	  
   }
@@ -33,6 +34,6 @@ public class SignUpToTinder {
 
   @AfterTest
 	public void afterClass() {
-	  	Browser.closePage(driver);
+	  //	Browser.closePage(driver);
 	}
 }
