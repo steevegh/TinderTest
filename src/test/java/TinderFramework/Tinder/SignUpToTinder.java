@@ -18,7 +18,6 @@ public class SignUpToTinder {
   public void signUpToTinderAction() throws InterruptedException {
 	  LoginPage login = new LoginPage(driver);
 	  login.openPage();
-	  login.LoginButtonActionFB();
 	  login.LoginWithFacebookAccountGetStarted();
 	  
 	  
@@ -28,7 +27,7 @@ public class SignUpToTinder {
 	public void beforeClass() throws IOException{
 	  	driver = Browser.setUpFirefox();
 		Browser.deleteCookies(driver);
-		Browser.maximizePage(driver);
+		
 	  	
 	}
 
