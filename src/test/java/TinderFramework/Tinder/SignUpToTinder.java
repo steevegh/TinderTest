@@ -25,7 +25,7 @@ public class SignUpToTinder {
   
   @BeforeTest 
 	public void beforeClass() throws IOException{
-	  	driver = Browser.setUpFirefox();
+	  	driver = Browser.setUpChrome();
 		Browser.deleteCookies(driver);
 		
 	  	
@@ -33,6 +33,6 @@ public class SignUpToTinder {
 
   @AfterTest
 	public void afterClass() {
-	  //	Browser.closePage(driver);
+	  	Browser.closePage(driver);
 	}
 }
