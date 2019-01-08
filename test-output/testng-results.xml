@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10615" started-at="2019-01-04T12:59:40Z" finished-at="2019-01-04T12:59:50Z">
+  <suite name="Default suite" duration-ms="21444" started-at="2019-01-08T09:55:33Z" finished-at="2019-01-08T09:55:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10615" started-at="2019-01-04T12:59:40Z" finished-at="2019-01-04T12:59:50Z">
-      <class name="TinderFramework.Tinder.NewTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TinderFramework.Tinder.NewTest@4abdb505]" name="beforeClass" is-config="true" duration-ms="6059" started-at="2019-01-04T12:59:40Z" finished-at="2019-01-04T12:59:46Z">
+    <test name="Default test" duration-ms="21444" started-at="2019-01-08T09:55:33Z" finished-at="2019-01-08T09:55:55Z">
+      <class name="TinderFramework.Tinder.SignUpToTinder">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TinderFramework.Tinder.SignUpToTinder@4eb7f003]" name="beforeClass" is-config="true" duration-ms="5152" started-at="2019-01-08T09:55:33Z" finished-at="2019-01-08T09:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="openTinderPage()[pri:0, instance:TinderFramework.Tinder.NewTest@4abdb505]" name="openTinderPage" duration-ms="3539" started-at="2019-01-04T12:59:46Z" finished-at="2019-01-04T12:59:49Z">
+        <test-method status="PASS" signature="signUpToTinderAction()[pri:0, instance:TinderFramework.Tinder.SignUpToTinder@4eb7f003]" name="signUpToTinderAction" duration-ms="16273" started-at="2019-01-08T09:55:38Z" finished-at="2019-01-08T09:55:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openTinderPage -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:TinderFramework.Tinder.NewTest@4abdb505]" name="afterClass" is-config="true" duration-ms="1000" started-at="2019-01-04T12:59:49Z" finished-at="2019-01-04T12:59:50Z">
+        </test-method> <!-- signUpToTinderAction -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TinderFramework.Tinder.SignUpToTinder@4eb7f003]" name="afterClass" is-config="true" duration-ms="1" started-at="2019-01-08T09:55:55Z" finished-at="2019-01-08T09:55:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- TinderFramework.Tinder.NewTest -->
+      </class> <!-- TinderFramework.Tinder.SignUpToTinder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

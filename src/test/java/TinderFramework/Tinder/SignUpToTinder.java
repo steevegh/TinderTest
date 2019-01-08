@@ -15,7 +15,7 @@ public class SignUpToTinder {
 	
 	
   @Test
-  public void signUpToTinderAction() throws InterruptedException {
+  public void signUpToTinderAction() throws Exception {
 	  LoginPage login = new LoginPage(driver);
 	  login.openPage();
 	  login.LoginWithFacebookAccountGetStarted();
