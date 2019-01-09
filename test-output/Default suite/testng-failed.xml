@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TinderFramework.Tinder.SignUpToTinder">
+      <class name="TinderFramework.Tinder.DoSwipeRightTinder">
         <methods>
-          <include name="afterClass"/>
-          <include name="signUpToTinderAction"/>
           <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="openTinderPage"/>
         </methods>
-      </class> <!-- TinderFramework.Tinder.SignUpToTinder -->
+      </class> <!-- TinderFramework.Tinder.DoSwipeRightTinder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
