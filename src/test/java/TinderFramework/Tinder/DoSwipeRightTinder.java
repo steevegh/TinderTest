@@ -16,7 +16,7 @@ public class DoSwipeRightTinder{
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-	  	driver = Browser.setUpFirefox();
+	  	driver = Browser.setUpFirefoxWithProfile();
 		Browser.maximizePage(driver);
 	}
 
