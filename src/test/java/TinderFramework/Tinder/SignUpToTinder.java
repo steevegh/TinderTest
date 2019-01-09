@@ -18,21 +18,22 @@ public class SignUpToTinder {
   public void signUpToTinderAction() throws Exception {
 	  LoginPage login = new LoginPage(driver);
 	  login.openPage();
-	  login.LoginWithFacebookAccountGetStarted();
+	  //login.LoginWithFacebookAccountGetStarted();
+	  //login.SettingUpFirstAccessTinder();
 	  
 	  
   }
   
   @BeforeTest 
 	public void beforeClass() throws IOException{
-	  	driver = Browser.setUpChrome();
-		Browser.deleteCookies(driver);
+	  	driver = Browser.setUpFirefox();
+		
 		
 	  	
 	}
 
   @AfterTest
 	public void afterClass() {
-	  	Browser.closePage(driver);
+	  //	Browser.closePage(driver);
 	}
 }

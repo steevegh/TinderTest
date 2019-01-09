@@ -5,27 +5,27 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class OpenTinderPage{
+
+public class DoSwipeRightTinder{
 	WebDriver driver;
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-		driver = Browser.setUpChrome();
-		Browser.deleteCookies(driver);
+	  	driver = Browser.setUpFirefox();
 		Browser.maximizePage(driver);
 	}
 
 	@Test
 	public void openTinderPage() throws InterruptedException {
 		LoginPage l = new LoginPage(driver);
-		l.openPage();
+		Assert.assertEquals(l.openPageTinderLogged(), "https://tinder.com/app/recs");
+		MatchTinder m = new MatchTinder(driver);
+		m.swipeRightTinder();
 
 	}
 
