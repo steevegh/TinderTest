@@ -17,7 +17,7 @@ public class OpenTinderPage{
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-		driver = Browser.setUpChrome();
+		driver = Browser.setUpFirefox();
 		Browser.deleteCookies(driver);
 		Browser.maximizePage(driver);
 	}

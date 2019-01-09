@@ -18,15 +18,15 @@ public class SignUpToTinder {
   public void signUpToTinderAction() throws Exception {
 	  LoginPage login = new LoginPage(driver);
 	  login.openPage();
-	  //login.LoginWithFacebookAccountGetStarted();
-	  //login.SettingUpFirstAccessTinder();
+	  login.LoginWithFacebookAccountGetStarted();
+	 
 	  
 	  
   }
   
   @BeforeTest 
 	public void beforeClass() throws IOException{
-	  	driver = Browser.setUpFirefox();
+	  	driver = Browser.setUpFirefoxWithGeoLocation();
 		
 		
 	  	
@@ -34,6 +34,6 @@ public class SignUpToTinder {
 
   @AfterTest
 	public void afterClass() {
-	  //	Browser.closePage(driver);
+	  	Browser.closePage(driver);
 	}
 }
