@@ -17,21 +17,21 @@ public class OpenTinderPage{
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-		driver = Browser.setUpFirefox();
-		Browser.deleteCookies(driver);
+		driver = Browser.setUpChromeProfileTinderLogged();
 		Browser.maximizePage(driver);
 	}
 
 	@Test
 	public void openTinderPage() throws InterruptedException {
-		LoginPage l = new LoginPage(driver);
-		l.openPage();
+		//LoginPage l = new LoginPage(driver);
+		//l.openPage();
 
 	}
 
 	@AfterTest
 	public void afterClass() throws IOException {
-		Browser.closePage(driver);
+		Browser.deleteCookies(driver);
+		//Browser.closePage(driver);
 	}
 
 }
