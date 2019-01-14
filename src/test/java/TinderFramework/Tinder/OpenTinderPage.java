@@ -11,27 +11,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 
 public class OpenTinderPage{
 	WebDriver driver;
+	LoginPage l;
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-		driver = Browser.setUpChromeProfileTinderLogged();
+		driver = Browser.setUpFirefox();
 		Browser.maximizePage(driver);
 	}
 
 	@Test
 	public void openTinderPage() throws InterruptedException {
-		//LoginPage l = new LoginPage(driver);
-		//l.openPage();
+		l = PageFactory.initElements(driver,LoginPage.class);
+		l.openPage();
 
 	}
 
 	@AfterTest
 	public void afterClass() throws IOException {
-		Browser.deleteCookies(driver);
-		//Browser.closePage(driver);
+		//Browser.deleteCookies(driver);
+		Browser.closePage(driver);
 	}
 
 }

@@ -9,22 +9,24 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class DoSwipeRightTinder{
 	WebDriver driver;
-	
+	LoginPage l;
+	MatchTinder m;
 	@BeforeTest 
 	public void beforeClass() throws IOException{
-	  	driver = Browser.setUpChromeProfileTinderLogged();
+	  	driver = Browser.setUpFirefoxWithProfile();
 		Browser.maximizePage(driver);
 	}
 
 	@Test
 	public void openTinderPage() throws InterruptedException {
-		LoginPage l = new LoginPage(driver);
+		l = PageFactory.initElements(driver,LoginPage.class);
 		Assert.assertEquals(l.openPageTinderLogged(), "https://tinder.com/app/recs");
-		MatchTinder m = new MatchTinder(driver);
+		m = PageFactory.initElements(driver,MatchTinder.class);
 		m.swipeRightTinder();
 
 	}

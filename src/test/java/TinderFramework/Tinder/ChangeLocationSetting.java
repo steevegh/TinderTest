@@ -9,10 +9,14 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 
 public class ChangeLocationSetting{
 	WebDriver driver;
+	LoginPage l;
+	SettingPage s;
+	
 	
 	@BeforeTest 
 	public void beforeClass() throws IOException{
@@ -22,17 +26,17 @@ public class ChangeLocationSetting{
 
 	@Test
 	public void openTinderPage() throws InterruptedException {
-		LoginPage l = new LoginPage(driver);
+		l = PageFactory.initElements(driver,LoginPage.class);
 		l.openPageTinderLogged();
 		System.out.println(l);
-		SettingPage s = new SettingPage(driver);
+		s = PageFactory.initElements(driver,SettingPage.class);
 		s.changeGeolocation();
 
 	}
 
 	@AfterTest
 	public void afterClass() throws IOException {
-		//Browser.closePage(driver);
+		Browser.closePage(driver);
 	}
 
 }
